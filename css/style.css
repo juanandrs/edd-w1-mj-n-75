@@ -37,5 +37,25 @@ nav li {
 nav li a {
     color: white;
     font-size: 1.5rem;
+    font-weight: bolder;
     text-decoration: none;
+}
+
+figure img
+{
+    display: block;
+    width: 100%;
+}
+
+figure figcaption {
+    background-color: rgb(1, 0, 10);
+}
+
+figure h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: justify;
+    padding: 1.5rem;
+    line-height: 120%;
 }
