@@ -1,10 +1,16 @@
 :root {
     font-size: 62.5%;
+
+}
+
+* {
+    outline: dotted 1px darkred;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: darkred;
     font-size: 1rem;
+    overflow-x: hidden;
 }
 header {
     background-color: darkred;
@@ -41,6 +47,17 @@ nav li a {
     text-decoration: none;
 }
 
+#noticias_destacadas {
+    width: 300vw;
+    overflow: auto;
+    animation: 15s slider infinite;
+}
+
+figure {
+    float: left;
+
+}
+
 figure img
 {
     display: block;
@@ -58,4 +75,14 @@ figure h2 {
     text-align: justify;
     padding: 1.5rem;
     line-height: 120%;
+}
+
+@keyframes slider {
+    0% { margin-left: 0 }
+    20% { margin-left: 0}
+    40% { margin-left: -100vw}
+    60% { margin-left: -100vw;}
+    80% { margin-left: -200vw}
+    100% { margin-left: -200vw };
+    }
 }
