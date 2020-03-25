@@ -40,7 +40,7 @@ nav li a {
 #noticias-destacadas {
     width: 300vw;
     overflow: auto;
-    /*animation: 20s slider infinite;*/
+    animation: 20s slider infinite;
 }
 figure {
     float: left;
