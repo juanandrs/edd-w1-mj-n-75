@@ -1,108 +1,146 @@
-:root {
-    font-size: 62.5%;
-}
-* {
-    outline: dotted 1px red;
-}
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #232323;
-    font-size: 1.5rem;
-    overflow-x: hidden;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	color: #333333;
+  overflow-x: hidden;
 }
 header {
-    background-color: #232323;
-    padding: 2rem;
-    overflow: auto;
+	background-color: #333333;
+	padding: 15px;
+	overflow: hidden;
 }
-h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #FFF;
-    float: left;
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-left: 6rem;
+header h1 {
+  font-size: 26px;
+	color: #FFFFFF;
+	float: left;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+  background-size: contain;
+	padding-left: 65px;
+  font-weight: 700;
+}
+header a {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+header a:hover {
+	background-color: #FFFFFF;
+	color: #333333;
 }
 nav {
-    float: right;
-    margin-top: 0.5rem;
+	float: right;
 }
-nav li {
-    display: inline;
-    margin: 0 1rem;
-}
-nav li a {
-    color: #FFF;
-    text-decoration: none;
-}
-#noticias-destacadas {
-    width: 300vw;
-    overflow: auto;
-    /*animation: 20s slider infinite;*/
-}
-figure {
-    float: left;
-    width: 100vw;
+nav ul li {
+	display: inline-block;
 }
 img {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 }
-figure figcaption {
-    background-color: #232323;
+#noticias-destacadas {
+  width: calc(100vw * 3);
+  overflow: hidden;
+  animation: 15s slider infinite;
+  position: relative;
 }
-figure h2 {
-    color: #FFF;
-    font-weight: bold;
-    font-size: 4rem;
-    padding: 2rem;
-    line-height: 100%;
+#noticias-destacadas figure {
+  float: left;
+  position: relative;
+  width: 100vw;
+}
+#noticias-destacadas figcaption { /* <-- busca al elemento con id="noticias-destacadas" */
+	background-color: #333333;
+	padding: 15px;
+}
+#noticias-destacadas h2 {
+	color: #FFFFFF;
+	font-size: 32px;
+	font-weight: 700;
 }
 .noticia {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; /* flext-start | flex-end | center | space-between | space-around | */
-    align-items: center; /* flex-start | flex-end | center | stretch */
-    min-height: 15rem;
+	border-bottom: solid 1px #D9D9D9;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: 10px;
+}
+.noticia:last-child {
+	border: none;
 }
 .noticia-img {
-    width: 30%;
+	width: 30%;
 }
 .noticia-txt {
-    width: 65%;
+	width: 65%
 }
 .noticia-txt h3 {
-    font-weight: bold;
-    font-size: 2rem;
-    line-height: 125%;
+	font-weight: 700;
+	font-size: 28px;
 }
-.noticia-txt p:nth-of-type(1) {
-    line-height: 200%;
+.noticia-txt a {
+	text-decoration: none;
+	color: #000;
 }
-.noticia-txt p:nth-of-type(1) a {
-    text-decoration: none;
-    color: #000;
+.noticia-txt p {
+	font-size: 16px;
 }
-#tabla-resultados table {
-    margin: auto;
+.noticia-txt h3,
+.noticia-txt p {
+	line-height: 1.5;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
-#tabla-resultados table th {
-    background-color: red;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 1.6rem;
-    padding: 1rem;
+#tabla-posiciones td,
+#tabla-posiciones th {
+	padding: 12px;
 }
-
+#tabla-posiciones th {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 700;
+}
+#tabla-posiciones td {
+	background-color: #D9D9D9;
+	vertical-align: middle;
+}
+#tabla-posiciones tr {
+	border-bottom: solid 1px #999999;
+}
+#tabla-posiciones tr:first-child,
+#tabla-posiciones tr:last-child {
+	border: none;
+}
+#tabla-posiciones table {
+	width: 600px;
+	margin: auto;
+}
+#tabla-posiciones td:nth-of-type(odd) {
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+}
+#tabla-posiciones td:nth-of-type(even) span {
+	font-weight: 700;
+	color: #008899;
+}
+footer {
+	background-color: #333333;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;
+}
+/* Animaciones CSS */
 @keyframes slider {
-    0% { margin-left: 0 }
-    20% { margin-left: 0 }
-
-    40% { margin-left: -100vw }
-    60% { margin-left: -100vw }
-
-    80% { margin-left: -200vw }
-    100% { margin-left: -200vw }
+    0% { left: 0 }
+   20% { left: 0 }
+   40% { left: -100vw }
+   60% { left: -100vw }
+   80% { left: -200vw }
+  100% { left: -200vw }
 }
